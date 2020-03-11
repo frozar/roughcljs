@@ -1,0 +1,44 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/main"
+  "src/test"
+  "src/dev"]
+
+ :dependencies
+ [[hiccup "1.0.5"]
+  [hickory "0.7.1"]
+  [com.rpl/specter "1.1.3"]
+
+  ;; development dependancies
+  [reagent "0.9.1"]
+  [reagent-utils "0.3.3"]
+  ]
+
+ :builds
+ {:lib
+  {:target :browser
+   :devtools {:http-root "public"
+              :http-port 8080
+              :autoload true
+              :repl-init-ns roughcljs.core
+              :repl-pprint true}
+   :modules {:main {:entries [roughcljs.core]}}
+   }
+
+  :test
+  {:target    :browser-test
+   :test-dir  "out/js/test"
+   :devtools  {:http-port 8081
+               :http-root "out/js/test"}}
+
+  :app
+  {:target :browser
+   :devtools {:http-root "public"
+              :http-port 8080
+              :autoload true
+              :repl-init-ns roughcljs.app
+              :repl-pprint true}
+   :modules {:main {:init-fn roughcljs.app/init!}}
+   }
+
+  }}

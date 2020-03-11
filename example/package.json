@@ -1,0 +1,14 @@
+{
+  "name": "roughcljs-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "shadow-cljs": "2.8.90"
+  },
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "roughjs": "^4.0.4"
+  }
+}

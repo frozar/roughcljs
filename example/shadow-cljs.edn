@@ -1,0 +1,20 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/main"]
+
+ :dependencies
+ [[reagent "0.9.1"]
+  [reagent-utils "0.3.3"]
+  [org.clojars.frozar/roughcljs "0.1.0-SNAPSHOT"]
+  ]
+
+ :builds
+ {:app
+  {:target :browser
+   :devtools {:http-root "public"
+              :http-port 8080
+              :autoload true
+              :repl-init-ns roughcljs.app
+              :repl-pprint true}
+   :modules {:main {:init-fn roughcljs.app/init!}}}
+  }}
