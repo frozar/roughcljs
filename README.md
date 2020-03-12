@@ -1,4 +1,4 @@
-# RoughCLJS
+![roughcljs-logo](https://github.com/frozar/roughcljs/blob/master/logo_roughcljs.svg "RoughCLJS logo")
 
 `RoughCLJS` is a wrapper around the nice drawing library `RoughJS`:
 https://roughjs.com/
