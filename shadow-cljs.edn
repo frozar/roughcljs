@@ -25,11 +25,10 @@
    :modules {:main {:entries [roughcljs.core]}}
    }
 
-  :test
-  {:target    :browser-test
-   :test-dir  "out/js/test"
-   :devtools  {:http-port 8081
-               :http-root "out/js/test"}}
+  :ci
+  {:target :karma
+   :output-to "target/ci.js"
+   }
 
   :logo
   {:target :browser

@@ -26,6 +26,13 @@ To compile the project:
 shadow-cljs compile lib
 ```
 
+## Test
+
+Thes tests are launched through Karma. To compile and launch them:
+```shell
+shadow-cljs watch ci && karma start
+```
+
 ## Publish the lib on clojar
 
 To generate the clojars package:
