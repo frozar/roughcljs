@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "create-react-class": "^15.6.3",
     "karma": "^4.4.1",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cljs-test": "^0.1.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "shadow-cljs": "2.8.90"
   },
   "dependencies": {
-    "create-react-class": "^15.6.3",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
     "roughjs": "^4.0.4"
   }
 }

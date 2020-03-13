@@ -15,16 +15,7 @@
   ]
 
  :builds
- {:lib
-  {:target :browser
-   :devtools {:http-root "public"
-              :http-port 8080
-              :autoload true
-              :repl-init-ns roughcljs.core
-              :repl-pprint true}
-   :modules {:main {:entries [roughcljs.core]}}
-   }
-
+ {
   :ci
   {:target :karma
    :output-to "target/ci.js"
@@ -35,7 +26,7 @@
    :devtools {:http-root "public"
               :http-port 8080
               :autoload true
-              :repl-init-ns roughcljs.logo
+              :repl-init-ns logo.app
               :repl-pprint true}
    :modules {:main {:init-fn logo.app/init!}}
    }
