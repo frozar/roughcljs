@@ -3,9 +3,9 @@
  ["src/main"]
 
  :dependencies
- [[reagent "0.9.1"]
+ [[reagent "0.10.0"]
   [reagent-utils "0.3.3"]
-  [org.clojars.frozar/roughcljs "0.1.0-SNAPSHOT"]
+  [org.clojars.frozar/roughcljs "0.1.0"]
   ]
 
  :builds

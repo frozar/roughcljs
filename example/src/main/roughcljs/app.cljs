@@ -1,5 +1,5 @@
 (ns roughcljs.app
-  (:require [reagent.core :as reagent]
+  (:require [reagent.dom :as reagent]
             [roughcljs.core :as rough]
             )
   )
