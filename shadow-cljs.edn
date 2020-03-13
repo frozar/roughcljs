@@ -31,14 +31,14 @@
    :devtools  {:http-port 8081
                :http-root "out/js/test"}}
 
-  :app
+  :logo
   {:target :browser
    :devtools {:http-root "public"
               :http-port 8080
               :autoload true
-              :repl-init-ns roughcljs.app
+              :repl-init-ns roughcljs.logo
               :repl-pprint true}
-   :modules {:main {:init-fn roughcljs.app/init!}}
+   :modules {:main {:init-fn logo.app/init!}}
    }
 
   }}

@@ -1,4 +1,4 @@
-(ns roughcljs.app
+(ns logo.app
   (:require [reagent.dom :as rd]
             [roughcljs.core :as rough]
             )
