@@ -23,6 +23,7 @@ npx create-cljs-project roughcljs
 
 Thes tests are launched through Karma. To compile and launch them:
 ```shell
+npm i -g karma-cli
 shadow-cljs watch ci && karma start
 ```
 
