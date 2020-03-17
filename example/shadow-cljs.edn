@@ -5,7 +5,7 @@
  :dependencies
  [[reagent "0.10.0"]
   [reagent-utils "0.3.3"]
-  [org.clojars.frozar/roughcljs "0.1.1-SNAPSHOT"]
+  [frozar/roughcljs "0.1.1"]
   ]
 
  :builds
