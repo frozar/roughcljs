@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 0.2.2 - 2020-04-28
+### Changed
+ - Avoid to use the ":default" keyword in required package: allow cljdoc to work.
+
 ## 0.2.1 - 2020-04-07
 ### Fixed
  - Fix a security issue by updating minimist package dependency thanks to dependatbot.
