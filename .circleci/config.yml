@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/clojure:lein-2.7.1
+      - image: frozar/mikado-graph-ci:latest
         user: circleci
 
       # Specify service dependencies here if necessary
@@ -32,12 +32,14 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v2-dependencies-
 
-      - run: .circleci/setup_env.sh
+      - run: npm i
 
       - save_cache:
           paths:
             - ~/.m2
           key: v2-dependencies-{{ checksum "project.clj" }}
 
+      # compile tests!
+      - run: shadow-cljs compile ci
       # run tests!
       - run: karma start --single-run
