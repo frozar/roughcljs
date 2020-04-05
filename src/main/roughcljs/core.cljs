@@ -39,11 +39,14 @@
       :curve
       (fn [points rough-option]
         (.curve rough-canvas (clj->js points) (rought-option->js rough-option)))
+
       :path
       (fn [d rough-option]
-        (let [path-rough-HTML-node (.path rough-canvas (clj->js d) (rought-option->js rough-option))
-              pattern-rough-HTML-node (.-svg rough-canvas)
-              ]
+        (let [path-rough-HTML-node
+              (.path rough-canvas (clj->js d) (rought-option->js rough-option))
+
+              pattern-rough-HTML-node
+              (.-svg rough-canvas)]
           [path-rough-HTML-node pattern-rough-HTML-node]
           )
         )
@@ -52,8 +55,8 @@
 (defn- parse-rough-js-node->hiccup [rough-js-node shape-key]
   (-> rough-js-node
       (#(case shape-key
-          :any-shape-except-path (.-outerHTML %)
-          :path (-> %
+          :any-shape-except-pattern (.-outerHTML %)
+          :pattern (-> %
                     (.getElementsByTagName "pattern")
                     (aget 0)
                     (.-outerHTML)
@@ -73,7 +76,7 @@
 
 (defn- rough-js-node->hiccup
   ([rough-js-node group-option]
-   (rough-js-node->hiccup rough-js-node group-option :any-shape-except-path))
+   (rough-js-node->hiccup rough-js-node group-option :any-shape-except-pattern))
   ([rough-js-node group-option shape-key]
    (-> rough-js-node
        (parse-rough-js-node->hiccup shape-key)
@@ -122,10 +125,12 @@
       :path
       (let [[d] args
             [path-rough-js-node pattern-rough-js-node] (compute-shape d rough-option)]
-        [:<>
-         (rough-js-node->hiccup pattern-rough-js-node {} :path)
-         (rough-js-node->hiccup path-rough-js-node group-option)
-         ]
+        (if (:fill rough-option)
+          [:<>
+           (rough-js-node->hiccup pattern-rough-js-node {} :pattern)
+           (rough-js-node->hiccup path-rough-js-node group-option)
+           ]
+          (rough-js-node->hiccup path-rough-js-node group-option))
         )
       )))
 
