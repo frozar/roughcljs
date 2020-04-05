@@ -1,4 +1,6 @@
 ## Unreleased
+
+## 0.2.0 - 2020-04-05
 ### Fixed
  - Calling of `roughcljs.core/path` without the `rough-option` `:fill` crashed
    the library. To fix it, the present of `:fill` option is checked. The skeleton
