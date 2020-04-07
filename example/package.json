@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "minimist": "^1.2.2",
+    "minimist": "^1.2.3",
     "shadow-cljs": "2.8.90"
   },
   "dependencies": {
