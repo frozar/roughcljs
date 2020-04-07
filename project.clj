@@ -1,4 +1,4 @@
-(defproject frozar/roughcljs "0.2.0"
+(defproject frozar/roughcljs "0.2.1"
   :description "Clojurescript wrapper around roughjs library"
   :url "https://github.com/frozar/roughcljs"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"

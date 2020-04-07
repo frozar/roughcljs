@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 0.2.1 - 2020-04-07
+### Fixed
+ - Fix a security issue by updating minimist package dependency thanks to dependatbot.
+
 ## 0.2.0 - 2020-04-05
 ### Fixed
  - Calling of `roughcljs.core/path` without the `rough-option` `:fill` crashed
