@@ -1,5 +1,5 @@
 (ns roughcljs.core
-  (:require ["roughjs/bin/rough" :default rough]
+  (:require ["roughjs/bin/rough" :rename {default rough}]
             [roughcljs.utils :as utils]
             [hickory.core :as hickory]
             )
