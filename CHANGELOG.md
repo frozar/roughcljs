@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 0.2.3 - 2020-04-28
+### Fixed
+ - Fix the header required package: ":refer" + ":rename"
+
 ## 0.2.2 - 2020-04-28
 ### Changed
  - Avoid to use the ":default" keyword in required package: allow cljdoc to work.
