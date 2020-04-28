@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 0.2.4 - 2020-04-28
+### Fixed
+ - Fix repository address in the deliver package.
+
 ## 0.2.3 - 2020-04-28
 ### Fixed
  - Fix the header required package: ":refer" + ":rename"
