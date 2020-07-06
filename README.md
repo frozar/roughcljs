@@ -33,3 +33,9 @@ To generate the clojars package:
 lein jar
 lein deploy clojars
 ```
+
+## Documentation
+
+The author of [RoughJS](https://roughjs.com/) has published a fairly complete
+explanation of the algorithms used in this library:
+https://shihn.ca/posts/2020/roughjs-algorithms/
