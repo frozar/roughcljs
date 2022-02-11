@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "create-react-class": "^15.6.3",
-    "karma": "^4.4.1",
+    "karma": "^6.3.14",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cljs-test": "^0.1.0",
     "minimist": "^1.2.3",
